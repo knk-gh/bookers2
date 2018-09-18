@@ -10,13 +10,13 @@
 	       			</span>
 				<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
 	     			<span class="glyphicon glyphicon-home" aria-hidden="true">
-	       		 		<%= link_to "book一覧", root_path %>
+	       		 		<%= link_to "book一覧", books_path %>
       			<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
 	     			<span class="glyphicon glyphicon-home" aria-hidden="true">
-	       		 		<%= link_to "user一覧", root_path %>
+	       		 		<%= link_to "user一覧", users_path %>
       			<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
 	     			<span class="glyphicon glyphicon-home" aria-hidden="true">
-	       		 		<%= link_to "Home", root_path %>
+	       		 		<%= link_to "Home", user_path(current_user.id) %>
      		 	</li>
 
     	<% else %>
