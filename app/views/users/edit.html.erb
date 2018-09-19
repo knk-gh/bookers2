@@ -1,8 +1,8 @@
-<%= render 'home/list-h' %>
+<%= render 'home/list_h' %>
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3" style="background-color: orange;">
+		<div class="col-lg-3">
 			<h2>User info</h2>
 
 
@@ -16,14 +16,15 @@
     			<% end %>
 
 			    <h5>name</h5>
-			    <%= f.text_field :username %>
+			    <%= f.text_field :username, class: "name" %>
 			    <h5>image</h5>
 			    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user_image" %>
 			    <h5>Introduction（最大５０文字まで）</h5>
-			    <%= f.text_area :profile_intro %><br>
+			    <%= f.text_area :profile_intro, class: "introduction" %><br>
 			    <%= f.submit '保存' %>
 			<% end %>
 
 		</div>
+	</div>
 
 <%= render 'home/list-f' %>

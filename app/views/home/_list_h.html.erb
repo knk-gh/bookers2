@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6" style="background-color: #cd853f; height: 50px;">
+			<h1 style="font-size: 20px; margin: 3px 0 0px 140px;">Bookers</h1>
+		</div>
+		<div class="col-lg-6" style="background-color: #cd853f; height: 50px; line-height: 50px; color: #513743;">
+
+			<% if user_signed_in? %>
+		       		<li style="list-style: none; float: right; display: inline-block; margin-left: 30px; margin-right: 150px;">
+		       			<span class="glyphicon glyphicon-log-out" aria-hidden="true">
+		       				<%= link_to "logout", destroy_user_session_path, method: :delete, style: "color: #513743;", class: "logout" %>
+		       			</span>
+		       		</li>
+					<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		     			<span class="glyphicon glyphicon-book" aria-hidden="true">
+		       		 		<%= link_to "book一覧", books_path, style: "color: #513743;", class: "books" %>
+		       		 	</span>
+		       		</li>
+	      			<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		     			<span class="glyphicon glyphicon-user" aria-hidden="true">
+		       		 		<%= link_to "user一覧", users_path, style: "color: #513743;", class: "users" %>
+		       		 	</span>
+		       		</li>
+	      			<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		     			<span class="glyphicon glyphicon-home" aria-hidden="true">
+		       		 		<%= link_to "Home", user_path(current_user.id), style: "color: #513743;", class: "user_#{current_user.id}" %>
+		       		 	</span>
+	     		 	</li>
+
+	    	<% else %>
+
+		       		<li style="list-style: none; float: right; display: inline-block; margin-left: 30px; margin-right: 150px;">
+		       			<span class="glyphicon glyphicon-log-in" aria-hidden="true">
+		       				<%= link_to "login", new_user_session_path, style: "color: #513743;", class: "sign_in" %>
+		       			</span>
+		     		</li>
+		       		<li style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		       			<span class="glyphicon glyphicon-edit" aria-hidden="true">
+		       				<%= link_to "sign up", new_user_registration_path, style: "color: #513743;", class: "sign_up" %>
+		       			</span>
+		       		</li>
+		     		<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		     			<span class="glyphicon glyphicon-link" aria-hidden="true">
+		       		 		<%= link_to "About", about_path, style: "color: #513743;", class: "about" %>
+		       		 	</span>
+		       		</li>
+		     		<li class="" style="list-style: none; float: right; display: inline-block; margin-left: 30px;">
+		     			<span class="glyphicon glyphicon-home" aria-hidden="true">
+		       		 		<%= link_to "Home", root_path, style: "color: #513743;", class: "home" %>
+		       		 	</span>
+		       		</li>
+	    	<% end %>
+		</div>
+	</div>
+</div>
