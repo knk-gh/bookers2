@@ -5,6 +5,12 @@
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
+            <% if resource.errors.any? %>
+            <%= resource.errors.count %>件のエラーが発生しました
+            <% resource.errors.full_messages.each do |message| %>
+            <%= message %>
+            <% end %>
+            <% end %>
 
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :username %><br />
