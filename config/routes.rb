@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
 
   get '/about' => 'home#about'
-  get '/users/sign_in' => 'sessions#new'
+
 end
