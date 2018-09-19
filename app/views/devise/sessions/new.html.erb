@@ -1,4 +1,4 @@
-<%= render 'home/list-h' %>
+<%= render 'home/list_h' %>
 
 <div style="margin-left: 150px;">
   <h2>Log in</h2>
@@ -6,12 +6,12 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "name" %>
+      <%= f.text_field :username, autofocus: true, autocomplete: "name", class: "name" %>
     </div>
 
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "password" %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
@@ -22,7 +22,7 @@
     <% end -%>
 
     <div class="actions" style="margin-bottom:10px;">
-      <%= f.submit "Log in", class:"btn btn-info"%>
+      <%= f.submit "Log in", class: "btn btn-info"%>
     </div>
   <% end %>
 

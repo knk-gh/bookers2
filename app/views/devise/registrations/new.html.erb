@@ -1,4 +1,4 @@
-<%= render 'home/list-h' %>
+<%= render 'home/list_h' %>
 
 <div style="margin-left: 150px;">
   <h2>Sign up</h2>
@@ -14,12 +14,12 @@
 
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "name" %>
+      <%= f.text_field :username, autofocus: true, autocomplete: "name", class: "name" %>
     </div>
 
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email" %>
     </div>
 
     <div class="field" style="margin-bottom:10px;">
@@ -27,16 +27,16 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "password" %>
     </div>
 
     <div class="field" style="margin-bottom:10px;">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "password_confirm" %>
     </div>
 
     <div class="actions" style="margin-bottom:10px;">
-      <%= f.submit "Sign up", class:"btn btn-success" %>
+      <%= f.submit "Sign up", class: "btn btn-success" %>
     </div>
   <% end %>
 
