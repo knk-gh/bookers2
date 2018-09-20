@@ -2,6 +2,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-3">
+			<p id="notice" style="color: #ff6347;">
+	 		<%=  notice %>
+			</p>
 			<h2>User info</h2>
 			<table class="table">
 				<tr>
@@ -17,7 +20,7 @@
 				</tr>
 			</table>
 			<% if @user == current_user %>
-			<%= link_to edit_user_path(current_user.id), class:'btn btn-default btn-md col-lg-12 edit_user_#{current_user.id}', style:"margin-bottom:10px;" do %>
+			<%= link_to edit_user_path(current_user.id), class: "btn btn-default btn-md col-lg-12 edit_user_#{current_user.id}", style:"margin-bottom:10px;" do %>
 			<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
 			<% end %>
 			<% end %>
