@@ -21,8 +21,9 @@
 			    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user_image" %>
 			    <h5>Introduction（最大５０文字まで）</h5>
 			    <%= f.text_area :profile_intro, class: "introduction" %><br>
-			    <%= f.submit '保存' %>
+			    <%= f.submit '保存', class: "btn btn-warning" %>
 			<% end %>
+			<p style="margin-top: 10px;"><%= link_to "Back", user_path(current_user.id), class: "back" %></p>
 
 		</div>
 	</div>
